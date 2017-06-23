@@ -9,7 +9,7 @@
   <title>算法练习 | TuHuablog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一、 排序算法1. 交换排序 冒泡排序       冒泡排序改进1 冒泡排序改进2 冒泡排序改进3   快速排序       2. 插入排序 直接插入排序 直接插入排序递归版   希尔排序  3. 选择排序 简单选择排序 二元选择排序   堆排序  4. 归并排序 二路归并排序递归版 二路归并排序非递归版">
-<meta name="keywords" content="算法,js">
+<meta name="keywords" content="js,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法练习">
 <meta property="og:url" content="http://yoursite.com/2017/02/01/readme/index.html">
@@ -189,14 +189,39 @@
     </h1>
   
 
-          
-          
+        
+        
         <a href="/2017/02/01/readme/" class="archive-article-date">
   	<time datetime="2017-02-01T12:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-01</time>
 </a>
         
       </header>
     
+    
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+    <span class="btn-bg"></span>
+    <span class="btn-text">文章导航</span>
+    </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、-排序算法"><span class="toc-number">1.</span> <span class="toc-text">一、 排序算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-交换排序"><span class="toc-number">1.1.</span> <span class="toc-text">1. 交换排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-插入排序"><span class="toc-number">1.2.</span> <span class="toc-text">2. 插入排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-选择排序"><span class="toc-number">1.3.</span> <span class="toc-text">3. 选择排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-归并排序"><span class="toc-number">1.4.</span> <span class="toc-text">4. 归并排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、-字符串"><span class="toc-number">2.</span> <span class="toc-text">二、 字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-字符串旋转"><span class="toc-number">2.1.</span> <span class="toc-text">1. 字符串旋转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-字符串包含"><span class="toc-number">2.2.</span> <span class="toc-text">2. 字符串包含</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-回文"><span class="toc-number">2.3.</span> <span class="toc-text">3. 回文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-最长回文子串长度"><span class="toc-number">2.4.</span> <span class="toc-text">4. 最长回文子串长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-全排列"><span class="toc-number">2.5.</span> <span class="toc-text">5. 全排列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-变形词"><span class="toc-number">2.6.</span> <span class="toc-text">6. 变形词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-字符串中数字串之和"><span class="toc-number">2.7.</span> <span class="toc-text">7. 字符串中数字串之和</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-去除字符串中连续K个0串"><span class="toc-number">2.8.</span> <span class="toc-text">8. 去除字符串中连续K个0串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-整数字符串转整数值"><span class="toc-number">2.9.</span> <span class="toc-text">9. 整数字符串转整数值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-字符串匹配问题"><span class="toc-number">2.10.</span> <span class="toc-text">10. 字符串匹配问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、-数组和矩阵"><span class="toc-number">3.</span> <span class="toc-text">三、 数组和矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-二维数组查找"><span class="toc-number">3.1.</span> <span class="toc-text">1. 二维数组查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-矩阵相关操作"><span class="toc-number">3.2.</span> <span class="toc-text">2. 矩阵相关操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-最小的k个元素"><span class="toc-number">3.3.</span> <span class="toc-text">3. 最小的k个元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-中间数"><span class="toc-number">3.4.</span> <span class="toc-text">4.中间数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-非负数组和为K的最长子数组"><span class="toc-number">3.5.</span> <span class="toc-text">5.非负数组和为K的最长子数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-次数出现大于N-K的数"><span class="toc-number">3.6.</span> <span class="toc-text">8.次数出现大于N/K的数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-逆序对"><span class="toc-number">3.7.</span> <span class="toc-text">9.逆序对</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-两个有序数组的中位数"><span class="toc-number">3.8.</span> <span class="toc-text">10.两个有序数组的中位数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、-递归和动态规划"><span class="toc-number">4.</span> <span class="toc-text">四、 递归和动态规划</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-斐波那契问题"><span class="toc-number">4.1.</span> <span class="toc-text">1. 斐波那契问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-最大子数组和相关问题"><span class="toc-number">4.2.</span> <span class="toc-text">2. 最大子数组和相关问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-最长递增子序列相关问题"><span class="toc-number">4.3.</span> <span class="toc-text">3. 最长递增子序列相关问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、-栈和队列"><span class="toc-number">5.</span> <span class="toc-text">五、 栈和队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-getMin功能栈"><span class="toc-number">5.1.</span> <span class="toc-text">1. getMin功能栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-两个栈实现队列功能"><span class="toc-number">5.2.</span> <span class="toc-text">2. 两个栈实现队列功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、二叉树"><span class="toc-number">6.</span> <span class="toc-text">七、二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-遍历"><span class="toc-number">6.1.</span> <span class="toc-text">1. 遍历</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、位运算"><span class="toc-number">7.</span> <span class="toc-text">八、位运算</span></a></li></ol>
+   </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+ 
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、-排序算法"><a href="#一、-排序算法" class="headerlink" title="一、 排序算法"></a>一、 排序算法</h2><h3 id="1-交换排序"><a href="#1-交换排序" class="headerlink" title="1. 交换排序"></a>1. 交换排序</h3><ul>
@@ -385,11 +410,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -481,26 +506,6 @@
 
 
   
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="readme" data-title="算法练习" data-url="http://yoursite.com/2017/02/01/readme/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-  
   
   
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
@@ -508,7 +513,7 @@
   var cloudTieConfig = {
     url: "http://yoursite.com/2017/02/01/readme/", 
     sourceId: "readme",
-    productKey: "e2691f5a96394bd9a3e1257a8f4ee2f3",
+    productKey: "true",
     target: "cloud-tie-wrapper"
   };
 </script>
@@ -518,33 +523,9 @@
   
 
   
+  <!-- 网易云跟帖 -->
 
 
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-    <span class="btn-bg"></span>
-    <span class="btn-text">文章导航</span>
-    </p>
-    <div id="toc-article" class="toc-article">
-        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-        <strong class="toc-title">文章目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、-排序算法"><span class="toc-number">1.</span> <span class="toc-text">一、 排序算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-交换排序"><span class="toc-number">1.1.</span> <span class="toc-text">1. 交换排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-插入排序"><span class="toc-number">1.2.</span> <span class="toc-text">2. 插入排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-选择排序"><span class="toc-number">1.3.</span> <span class="toc-text">3. 选择排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-归并排序"><span class="toc-number">1.4.</span> <span class="toc-text">4. 归并排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、-字符串"><span class="toc-number">2.</span> <span class="toc-text">二、 字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-字符串旋转"><span class="toc-number">2.1.</span> <span class="toc-text">1. 字符串旋转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-字符串包含"><span class="toc-number">2.2.</span> <span class="toc-text">2. 字符串包含</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-回文"><span class="toc-number">2.3.</span> <span class="toc-text">3. 回文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-最长回文子串长度"><span class="toc-number">2.4.</span> <span class="toc-text">4. 最长回文子串长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-全排列"><span class="toc-number">2.5.</span> <span class="toc-text">5. 全排列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-变形词"><span class="toc-number">2.6.</span> <span class="toc-text">6. 变形词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-字符串中数字串之和"><span class="toc-number">2.7.</span> <span class="toc-text">7. 字符串中数字串之和</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-去除字符串中连续K个0串"><span class="toc-number">2.8.</span> <span class="toc-text">8. 去除字符串中连续K个0串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-整数字符串转整数值"><span class="toc-number">2.9.</span> <span class="toc-text">9. 整数字符串转整数值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-字符串匹配问题"><span class="toc-number">2.10.</span> <span class="toc-text">10. 字符串匹配问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、-数组和矩阵"><span class="toc-number">3.</span> <span class="toc-text">三、 数组和矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-二维数组查找"><span class="toc-number">3.1.</span> <span class="toc-text">1. 二维数组查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-矩阵相关操作"><span class="toc-number">3.2.</span> <span class="toc-text">2. 矩阵相关操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-最小的k个元素"><span class="toc-number">3.3.</span> <span class="toc-text">3. 最小的k个元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-中间数"><span class="toc-number">3.4.</span> <span class="toc-text">4.中间数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-非负数组和为K的最长子数组"><span class="toc-number">3.5.</span> <span class="toc-text">5.非负数组和为K的最长子数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-次数出现大于N-K的数"><span class="toc-number">3.6.</span> <span class="toc-text">8.次数出现大于N/K的数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-逆序对"><span class="toc-number">3.7.</span> <span class="toc-text">9.逆序对</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-两个有序数组的中位数"><span class="toc-number">3.8.</span> <span class="toc-text">10.两个有序数组的中位数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、-递归和动态规划"><span class="toc-number">4.</span> <span class="toc-text">四、 递归和动态规划</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-斐波那契问题"><span class="toc-number">4.1.</span> <span class="toc-text">1. 斐波那契问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-最大子数组和相关问题"><span class="toc-number">4.2.</span> <span class="toc-text">2. 最大子数组和相关问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-最长递增子序列相关问题"><span class="toc-number">4.3.</span> <span class="toc-text">3. 最长递增子序列相关问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、-栈和队列"><span class="toc-number">5.</span> <span class="toc-text">五、 栈和队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-getMin功能栈"><span class="toc-number">5.1.</span> <span class="toc-text">1. getMin功能栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-两个栈实现队列功能"><span class="toc-number">5.2.</span> <span class="toc-text">2. 两个栈实现队列功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、二叉树"><span class="toc-number">6.</span> <span class="toc-text">七、二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-遍历"><span class="toc-number">6.1.</span> <span class="toc-text">1. 遍历</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、位运算"><span class="toc-number">7.</span> <span class="toc-text">八、位运算</span></a></li></ol>
-   </div>
-   <script type="text/javascript">
-    function showToc(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:block");
-        show_toc_btn.setAttribute("style","display:none");
-        };
-    function showBtn(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:none");
-        show_toc_btn.setAttribute("style","display:block");
-        };
-   </script>
- 
-<!-- 网易云跟帖 -->
 
 
 
@@ -658,7 +639,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color5">高级教程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -666,7 +647,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">高级教程</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>

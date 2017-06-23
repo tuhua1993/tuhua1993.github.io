@@ -9,7 +9,7 @@
   <title>js总结 | TuHuablog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1.数组的常用操作push()方法可向数组的末尾添加一个或者多个元素,并返回新数组的长度,unshift() 方法可向数组的开头添加一个或更多元素，并返回新数组的长度。Var arr = [1,2,3]  arr.push(4,5,6);  arr.unshift(-1,0,);pop() 方法删除数组的最后一个元素，并且返回被删除的元素的值。如果数组已经为空，则 pop() 不改变数组，并返回">
-<meta name="keywords" content="js,高级教程">
+<meta name="keywords" content="高级教程,js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js总结">
 <meta property="og:url" content="http://yoursite.com/2017/04/01/jsjiandan/index.html">
@@ -189,14 +189,39 @@
     </h1>
   
 
-          
-          
+        
+        
         <a href="/2017/04/01/jsjiandan/" class="archive-article-date">
   	<time datetime="2017-04-01T12:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-01</time>
 </a>
         
       </header>
     
+    
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+    <span class="btn-bg"></span>
+    <span class="btn-text">文章导航</span>
+    </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-数组的常用操作"><span class="toc-number">1.</span> <span class="toc-text">1.数组的常用操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-DOM节点的操作"><span class="toc-number">2.</span> <span class="toc-text">2.DOM节点的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Data-类型"><span class="toc-number">3.</span> <span class="toc-text">3.Data()类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-string类型"><span class="toc-number">4.</span> <span class="toc-text">4.string类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-offset与client"><span class="toc-number">5.</span> <span class="toc-text">5.offset与client</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-event-事件属性"><span class="toc-number">6.</span> <span class="toc-text">6.event 事件属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-scoll事件"><span class="toc-number">7.</span> <span class="toc-text">7.scoll事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-冒泡问题"><span class="toc-number">8.</span> <span class="toc-text">8.冒泡问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-闭包"><span class="toc-number">9.</span> <span class="toc-text">9.闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-面向对象"><span class="toc-number">10.</span> <span class="toc-text">10.面向对象</span></a></li></ol>
+   </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+ 
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="1-数组的常用操作"><a href="#1-数组的常用操作" class="headerlink" title="1.数组的常用操作"></a>1.数组的常用操作</h2><p>push()方法可向数组的末尾添加一个或者多个元素,并返回新数组的长度,<br>unshift() 方法可向数组的开头添加一个或更多元素，并返回新数组的长度。<br>Var arr = [1,2,3]  arr.push(4,5,6);  arr.unshift(-1,0,);<br>pop() 方法删除数组的最后一个元素，并且返回被删除的元素的值。如果数组已经为空，则 pop() 不改变数组，并返回 undefined 值。 arr.pop();<br>shift() 方法用于把数组的第一个元素删除，并返回被删除的元素的值。如果数组是空的，那么 shift() 方法不进行任何操作，返回 undefined 值。<br>concat() 连接数组，组成新数组   arr.concat(4,5,6);    创建新数组<br>该方法用于在一个数组后连接另一个或多个数组。它不会改变现有的数组，返回的是连接后的新数组。<br><a id="more"></a><br>concat(）方法可以接受值，也可以接受数组作为参数。 Var array1=[] ;  var array2,arry3<br>array1.concat(array2,array3,…);<br>Number(); 把对象的值转换为数值<br>join()  将数组各个元素是通过指定的分隔符进行连接成为一个字符串。arr.join(“-”);  “1-2-3”<br>split() 方法用于把一个字符串分割成字符串数组，必需指定要使用的分隔符。<br>如果分隔符为空字符串 (“”) ，string中的每个字符都会被分割 var str = “hello-world”<br>str.split(“-” );<br>可指定howmany参数，该参数为数值，指定返回的数组的最大长度。<br>sort()  对数组进行排序，返回排序后的数组对象。可接受参数，必须是函数。<br>Var arr = [“b”,”a”,”d”] arr.sort(mysort);      function mysort(a, b){return  a-b}<br>splice() 用于插入、删除或替换数组的元素。<br>首先，必须指定index，即从何处插入/删除元素。该参数为数值，为元素的下标。<br>其次，必须指定要删除的元素的个数，可以是0。如果未规定此参数，则删除从 index 开始到原数组结尾的所有元素。<br>如果要插入元素，可将新元素作为参数写在括号内，新元素之间用 , 隔开。 arr= [1,2,3,4]<br>arr.splice(2,2,”5”,”6”)</p>
@@ -280,11 +305,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">高级教程</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">高级教程</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
@@ -376,26 +401,6 @@
 
 
   
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="jsjiandan" data-title="js总结" data-url="http://yoursite.com/2017/04/01/jsjiandan/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-  
   
   
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
@@ -403,7 +408,7 @@
   var cloudTieConfig = {
     url: "http://yoursite.com/2017/04/01/jsjiandan/", 
     sourceId: "jsjiandan",
-    productKey: "e2691f5a96394bd9a3e1257a8f4ee2f3",
+    productKey: "true",
     target: "cloud-tie-wrapper"
   };
 </script>
@@ -413,33 +418,9 @@
   
 
   
+  <!-- 网易云跟帖 -->
 
 
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-    <span class="btn-bg"></span>
-    <span class="btn-text">文章导航</span>
-    </p>
-    <div id="toc-article" class="toc-article">
-        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-        <strong class="toc-title">文章目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-数组的常用操作"><span class="toc-number">1.</span> <span class="toc-text">1.数组的常用操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-DOM节点的操作"><span class="toc-number">2.</span> <span class="toc-text">2.DOM节点的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Data-类型"><span class="toc-number">3.</span> <span class="toc-text">3.Data()类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-string类型"><span class="toc-number">4.</span> <span class="toc-text">4.string类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-offset与client"><span class="toc-number">5.</span> <span class="toc-text">5.offset与client</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-event-事件属性"><span class="toc-number">6.</span> <span class="toc-text">6.event 事件属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-scoll事件"><span class="toc-number">7.</span> <span class="toc-text">7.scoll事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-冒泡问题"><span class="toc-number">8.</span> <span class="toc-text">8.冒泡问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-闭包"><span class="toc-number">9.</span> <span class="toc-text">9.闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-面向对象"><span class="toc-number">10.</span> <span class="toc-text">10.面向对象</span></a></li></ol>
-   </div>
-   <script type="text/javascript">
-    function showToc(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:block");
-        show_toc_btn.setAttribute("style","display:none");
-        };
-    function showBtn(){
-        var toc_article = document.getElementById("toc-article");
-        var show_toc_btn = document.getElementById("show-toc-btn");
-        toc_article.setAttribute("style","display:none");
-        show_toc_btn.setAttribute("style","display:block");
-        };
-   </script>
- 
-<!-- 网易云跟帖 -->
 
 
 
@@ -553,7 +534,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color5">高级教程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -561,7 +542,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">高级教程</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>
