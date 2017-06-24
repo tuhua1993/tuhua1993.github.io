@@ -178,7 +178,251 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-jsjiandan" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js总结
+    </h1>
+  
+
+        
+        
+        <a href="/2017/04/01/jsjiandan/" class="archive-article-date">
+  	<time datetime="2017-04-01T12:10:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-01</time>
+</a>
+        
+      </header>
+    
+    
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+    <span class="btn-bg"></span>
+    <span class="btn-text">文章导航</span>
+    </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-数组的常用操作"><span class="toc-number">1.</span> <span class="toc-text">1.数组的常用操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-DOM节点的操作"><span class="toc-number">2.</span> <span class="toc-text">2.DOM节点的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Data-类型"><span class="toc-number">3.</span> <span class="toc-text">3.Data()类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-string类型"><span class="toc-number">4.</span> <span class="toc-text">4.string类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-offset与client"><span class="toc-number">5.</span> <span class="toc-text">5.offset与client</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-event-事件属性"><span class="toc-number">6.</span> <span class="toc-text">6.event 事件属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-scoll事件"><span class="toc-number">7.</span> <span class="toc-text">7.scoll事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-冒泡问题"><span class="toc-number">8.</span> <span class="toc-text">8.冒泡问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-闭包"><span class="toc-number">9.</span> <span class="toc-text">9.闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-面向对象"><span class="toc-number">10.</span> <span class="toc-text">10.面向对象</span></a></li></ol>
+   </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+ 
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-数组的常用操作"><a href="#1-数组的常用操作" class="headerlink" title="1.数组的常用操作"></a>1.数组的常用操作</h2><p>push()方法可向数组的末尾添加一个或者多个元素,并返回新数组的长度,<br>unshift() 方法可向数组的开头添加一个或更多元素，并返回新数组的长度。<br>Var arr = [1,2,3]  arr.push(4,5,6);  arr.unshift(-1,0,);<br>pop() 方法删除数组的最后一个元素，并且返回被删除的元素的值。如果数组已经为空，则 pop() 不改变数组，并返回 undefined 值。 arr.pop();<br>shift() 方法用于把数组的第一个元素删除，并返回被删除的元素的值。如果数组是空的，那么 shift() 方法不进行任何操作，返回 undefined 值。<br>concat() 连接数组，组成新数组   arr.concat(4,5,6);    创建新数组<br>该方法用于在一个数组后连接另一个或多个数组。它不会改变现有的数组，返回的是连接后的新数组。<br><a id="more"></a><br>concat(）方法可以接受值，也可以接受数组作为参数。 Var array1=[] ;  var array2,arry3<br>array1.concat(array2,array3,…);<br>Number(); 把对象的值转换为数值<br>join()  将数组各个元素是通过指定的分隔符进行连接成为一个字符串。arr.join(“-”);  “1-2-3”<br>split() 方法用于把一个字符串分割成字符串数组，必需指定要使用的分隔符。<br>如果分隔符为空字符串 (“”) ，string中的每个字符都会被分割 var str = “hello-world”<br>str.split(“-” );<br>可指定howmany参数，该参数为数值，指定返回的数组的最大长度。<br>sort()  对数组进行排序，返回排序后的数组对象。可接受参数，必须是函数。<br>Var arr = [“b”,”a”,”d”] arr.sort(mysort);      function mysort(a, b){return  a-b}<br>splice() 用于插入、删除或替换数组的元素。<br>首先，必须指定index，即从何处插入/删除元素。该参数为数值，为元素的下标。<br>其次，必须指定要删除的元素的个数，可以是0。如果未规定此参数，则删除从 index 开始到原数组结尾的所有元素。<br>如果要插入元素，可将新元素作为参数写在括号内，新元素之间用 , 隔开。 arr= [1,2,3,4]<br>arr.splice(2,2,”5”,”6”)</p>
+<h2 id="2-DOM节点的操作"><a href="#2-DOM节点的操作" class="headerlink" title="2.DOM节点的操作"></a>2.DOM节点的操作</h2><p><div id="“div1”"><br>Var mydiv = document.getElementById(“div1”);<br>父节点： mydiv.parentNode;<br>相邻： mydiv.nextSibling;   mydiv.previousSibling<br>子节点： mydiv.childNodes();     firstChild()  lastChild()<br>document.getElementById<br>doucument.getElementsByName<br>document.getElementsByTagName(“li”)<br>document.getElementsByClassName<br>createElement(“”)     创建节点：返回一个元素对象<br>cloneNode(false)           克隆节点，接受一个参数deep，值为true或false。</div></p>
+<p>子节点操作：<br>appendChild()       向节点添加最后一个子节点<br>mydiv.appendChild(“p”);</p>
+<p>insertBefore()        在指定的已有子节点之前插入新的子节点。<br>如果未指定已有子节点，会在结尾插 入 newnode。<br>removeChild()        移除指定子节点</p>
+<p>属性操作：<br>div.getAttribute(“id”)<br>setAttribute(“id”,”mydiv”)<br>removeAttribute(“id”)</p>
+<h2 id="3-Data-类型"><a href="#3-Data-类型" class="headerlink" title="3.Data()类型"></a>3.Data()类型</h2><p>获取日期和时间  var mydate = new Date(“2016/8/20  00:00：00”);<br>getDate()                     获取日 1-31<br>getDay ()                     获取星期 0-6<br>getMonth ()                 获取月  0-11<br>getFullYear ()             获取完整年份（浏览器都支持）<br>getHours ()              获取小时 0-23<br>getMinutes ()               获取分钟 0-59<br>getSeconds ()                获取秒  0-59<br>getMilliseconds ()             获取当前的毫秒<br>getTime ()               返回累计毫秒数(从1970/1/1午夜)<br>setInterval()<br>setTimeout()   </p>
+<h2 id="4-string类型"><a href="#4-string类型" class="headerlink" title="4.string类型"></a>4.string类型</h2><p>回答下列每个函数的用法： var  str =“hello world”<br>indexOf(“l”); 根据字符返回位置<br>subStr(0, 2) 第一个参数是截取开始的位置， 第二个参数是截取的长度<br>subString(0,2) 第一个参数是截取开始的位置，第二个参数是结束位置<br>charAt (3) 根据位置返回字符<br>split<br>join 合并字符串<br>slice 截取字符串<br>toLowerCase<br>toUpperCase</p>
+<h2 id="5-offset与client"><a href="#5-offset与client" class="headerlink" title="5.offset与client"></a>5.offset与client</h2><p>offsetWidth    offsetHeight<br>得到元素对象包括边框在内的宽度和高度<br>offsetWidth =  width  + border  +  padding<br>div {  width:220px;  border-left:2px solid red; padding:10px;}<br>div.offsetWidth =  220 + 2 + 20     </p>
+<p>clientWidth clientHeight<br>得到元素对象边框以内的宽度和高度，不包括边框</p>
+<p>注意：offsetWidth，clientWidth 与 div.style.width 的区别<br>offsetLeft  offsetTop<br>返回对象与上级元素（最近的带有定位的父级元素）左边或上面的距离<br>如果父级都没有定位则以body 为准<br>距离从父级元素的外边距开始算。<br>offsetTop 与 style.top 的区别<br>一、最大区别在于  offsetLeft 、offsetTop 可以返回没有定位的元素距离左侧的位置。 而 style.left、style.top 不可以。只有定位的元素才有 left  top right  </p>
+<p>二、offsetTop 返回的是数字，而 style.top 返回的是字符串，除了数字外还带有单位：px。<br> style.left = 300px     </p>
+<p>三、offsetTop 只能返回，不能设置，而 style.top 可设置也可返回。</p>
+<p>四、如果没有给 HTML 元素指定过 top 样式，则 style.top 返回的是空字符串。</p>
+<p>五、style.left、style.top 只能得到行内样式。</p>
+<h2 id="6-event-事件属性"><a href="#6-event-事件属性" class="headerlink" title="6.event 事件属性"></a>6.event 事件属性</h2><p>我们学过一些事件 :   onmouseover   onmouseout…..作用于元素本身以及其子元素<br>onmouseenter   onmouseleave 只作用于元素本身<br>onmousedown   onmouseup  onclick<br>例：btn.onclick = function(event) {  语句 }</p>
+<p>event  就是事件的本身。<br>在触发DOM上的某个事件时，会产生一个事件对象event，这个对象中包含着所有与事件有关的信息。所有浏览器都支持event对象，但支持的方式不同。<br>比如鼠标操作时候，会添加鼠标位置的相关信息到事件对象中。<br>普通浏览器支持 event<br>ie 678 支持 window.event<br>所以我们 采取兼容性的写法 ：<br>  var event = event || window.event;  </p>
+<h2 id="7-scoll事件"><a href="#7-scoll事件" class="headerlink" title="7.scoll事件"></a>7.scoll事件</h2><p>onscroll 事件在元素滚动条在滚动时触发</p>
+<p>window.onscroll = function() {   }</p>
+<p>scrollTop 网页被卷去的高度。<br>谷歌浏览器 和没有声明 DTD  <doctype> ：<br>  document.body.scrollTop;<br>火狐 和其他浏览器<br>  document.documentElement.scrollTop;<br> ie9+  和 最新浏览器<br>  window.pageXOffset;     pageYOffset  （scrollTop）<br> 兼容性写法：<br>var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;<br>scrollTo(x,y)<br>window.scrollTo(15,15);<br>方法可把内容滚动到指定的坐标。<br>格式：<br>scrollTo(xpos,ypos)<br>xpos 必需。要在窗口文档显示区左上角显示的文档的 x 坐标。<br>ypos必需。要在窗口文档显示区左上角显示的文档的 y 坐标<br>因为我们的网页大部分都没有水平滚动条，所以，这个x 不太常用。</doctype></p>
+<h2 id="8-冒泡问题"><a href="#8-冒泡问题" class="headerlink" title="8.冒泡问题"></a>8.冒泡问题</h2><p>事件冒泡: 当一个元素上的事件被触发的时候，比如说鼠标点击了一个按钮，同样的事件将会在那个元素的所有祖先元素中被触发。这一过程被称为事件冒泡；这个事件从原始元素开始一直冒泡到DOM树的最上层。<br>顺序<br>IE 6.0:<br>div -&gt; body -&gt; html -&gt; document<br>其他浏览器:<br>div -&gt; body -&gt; html -&gt; document -&gt; window</p>
+<p>不是所有的事件都能冒泡。以下事件不冒泡：blur、focus、load、unload<br>阻止冒泡的方法<br> 标准浏览器 和  ie浏览器<br> w3c的方法是event.stopPropagation()<br> IE则是使用event.cancelBubble = true       bubble   冒泡  泡泡       cancel 取消<br> 兼容的写法：<br> if(event &amp;&amp; event.stopPropagation)<br>        {<br>             event.stopPropagation();  //  w3c 标准<br>        }<br>          else<br>          {<br>              event.cancelBubble = true;  // ie 678  ie浏览器<br>  }</p>
+<h2 id="9-闭包"><a href="#9-闭包" class="headerlink" title="9.闭包"></a>9.闭包</h2><p>用一个函数 去访问 另外一个函数内部定义的局部变量的方式就是闭包。<br>内部变量是局部变量<br>局部变量只能在函数作用域的内部使用。</p>
+<p>闭包的特点：<br>优点：不产生全局变量，实现属性私有化。<br>缺点：闭包中的数据会常驻内存，在不用的时候要删掉否则会导致内存溢出。<br>[javascript] view plain copy<br> function outerFun(){<br>   var a=0;<br>      function innerFun(){<br>        a++;<br>       alert(a);<br>       }<br> return innerFun;<br>  }<br> var obj=outerFun();<br>  obj(); 1  obj();  2<br>var obj2=outerFun();<br>  obj2(); 1 obj2(); 2<br>结果是:1,2,1,2</p>
+<h2 id="10-面向对象"><a href="#10-面向对象" class="headerlink" title="10.面向对象"></a>10.面向对象</h2><p>面向对象：通过类可以创建多个具有相同属性和方法的对象。</p>
+<p>面向对象有两种，基于类的（class-based）面向对象和 基于原型的 (prototype-based) 面向对象</p>
+<p>在基于类的面向对象方式中，对象（object）依靠 类（class）来产生。<br>而在基于原型的面向对象方式中，对象（object）则是依靠 构造器（constructor）利用 原型（prototype）构造出来的。</p>
+<p>ECMAScript中没有类的概念。ECMAScript中的对象是基于原型的面向对象方式。<br>面向对象的特性</p>
+<ol>
+<li>抽象<br>抽象就是忽略一个主题中与当前目标无关的那些方面，以便更充分地注意与当前目标有关的方面。</li>
+<li>封装<br>封装是把过程和数据包围起来，对数据的访问只能通过已定义的界面</li>
+<li>继承</li>
+<li>多态<br>多态是指两个或多个属于不同类的对象，对于同一个消息（方法调用）作出不同响应的方式<br>new<br>利用new 关键字 去声明新的对象 </li>
+</ol>
+<p>new运算符的作用是创建一个对象实例。这个对象可以是用户自定义的，也可以是带构造函数的一些系统自带的对象。<br>new 关键字可以让 this  指向新的对象 </p>
+<p>所谓”构造函数”，其实就是一个普通函数，但是内部使用了this变量。对构造函数使用new运算符，就能生成实例，并且this变量会绑定在实例对象上。<br>Object构造函数或对象字面量都可以创建单个对象，使用同一接口创建对象，会产生大量重复代码。</p>
+<p>工厂模式：可创建多个对象，不能解决对象识别问题。<br>构造函数模式：<br>原型模式：<br>prototype    原型属性<br>主要解决：函数因为使用非常非常多，重复执行效率太低。<br>Person.prototype.showName = function() {  // 用的共同的父亲<br>    alert(“我的名字是”+ this.name);<br>}</p>
+<p>写法：<br>类.prototype.方法  = function() {}  具体格式<br>可以把那些不变的属性和方法，直接定义在prototype对象上</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/IMG_1149.JPG">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/IMG_1150.JPG">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">高级教程</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/04/01/jsjiandan/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/06/21/My-New-Post/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          My New Post
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/02/10/build-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo+Github搭建自己的博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2017/04/01/jsjiandan/", 
+    sourceId: "jsjiandan",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+  
+
+  
+
+  
+
+<!-- 网易云跟帖 -->
+
+
+
           </div>
         </div>
       </div>
@@ -277,6 +521,18 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">高级教程</a>
               </li>
              
@@ -285,19 +541,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
             
             <div class="clearfix"></div>
