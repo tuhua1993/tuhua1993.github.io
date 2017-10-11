@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/21/angular-Js-总结/index.html">
 <meta property="og:site_name" content="TuHuablog">
 <meta property="og:description" content="一、AngularJS是什么？AngularJs（后面就简称ng了）是一个用于设计动态web应用的结构框架。首先，它是一个框架，不是类库，是像EXT一样提供一整套方案用于设计web应用。它不仅仅是一个javascript框架，因为它的核心其实是对HTML标签的增强。何为HTML标签增强？其实就是使你能够用标签完成一部分页面逻辑，具体方式就是通过自定义标签、自定义属性等，这些HTML原生没有的标签/">
-<meta property="og:updated_time" content="2017-10-11T15:32:13.261Z">
+<meta property="og:updated_time" content="2017-10-11T15:34:40.855Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AngularJs总结">
 <meta name="twitter:description" content="一、AngularJS是什么？AngularJs（后面就简称ng了）是一个用于设计动态web应用的结构框架。首先，它是一个框架，不是类库，是像EXT一样提供一整套方案用于设计web应用。它不仅仅是一个javascript框架，因为它的核心其实是对HTML标签的增强。何为HTML标签增强？其实就是使你能够用标签完成一部分页面逻辑，具体方式就是通过自定义标签、自定义属性等，这些HTML原生没有的标签/">
@@ -230,10 +230,10 @@
       
         <h3 id="一、AngularJS是什么？"><a href="#一、AngularJS是什么？" class="headerlink" title="一、AngularJS是什么？"></a>一、AngularJS是什么？</h3><p>AngularJs（后面就简称ng了）是一个用于设计动态web应用的结构框架。首先，它是一个框架，不是类库，是像EXT一样提供一整套方案用于设计web应用。它不仅仅是一个javascript框架，因为它的核心其实是对HTML标签的增强。何为HTML标签增强？其实就是使你能够用标签完成一部分页面逻辑，具体方式就是通过自定义标签、自定义属性等，这些HTML原生没有的标签/属性在ng中有一个名字：指令（directive）。后面会详细介绍。那么，什么又是动态web应用呢？与传统web系统相区别，web应用能为用户提供丰富的操作，能够随用户操作不断更新视图而不进行url跳转。ng官方也声明它更适用于开发CRUD应用，即数据操作比较多的应用，而非是游戏或图像处理类应用。为了实现这些，ng引入了一些非常棒的特性，包括模板机制、数据绑定、模块、指令、依赖注入、路由。通过数据与模板的绑定，能够让我们摆脱繁琐的DOM操作，而将注意力集中在业务逻辑上。Angular不推崇DOM操作，也就是说在NG中几乎找不到任何的DOM操作，但Angular本身内部使用dom来改变页面的值。</p>
 <hr>
+<a id="more"></a>
 <h3 id="二、AngularJS简单介绍"><a href="#二、AngularJS简单介绍" class="headerlink" title="二、AngularJS简单介绍"></a>二、AngularJS简单介绍</h3><p>AngularJS 重新定义了前端应用的开发方式。面对HTML和JavaScript之间的界线，它非但不畏缩不前，反而正面出击，提出了有效的解决方案。<br>很多前端应用的开发框架，比如Backbone、EmberJS等，都要求开发者继承此框架特有的一些JavaScript对象。这种方式有其长处，但它不必要地污染了开发者自己代码的对象空间，还要求开发者去了解内存里那些抽象对象。尽管如此我们还是接受了这种方式，因为网络最初的设计无法提供 我们今天所需的交互性，于是我们需要框架，来帮我们填补JavaScript和HTML之间的鸿沟。而且有了它，你不用再“直接”操控DOM，只要给你的DOM注上metadata（即AngularJS里的directive们），然后让AngularJS来帮你操纵DOM。<br>AngularJS 1.x 官方网站<br><a href="https://angularjs.org/" target="_blank" rel="external">https://angularjs.org/</a><br>AngularJS 2.x 官方网站<br><a href="https://angular.io/" target="_blank" rel="external">https://angular.io/</a><br>Google Material Design for Angular<br><a href="https://material.angularjs.org" target="_blank" rel="external">https://material.angularjs.org</a><br>Angular UI（Angular最大的第三方社区）<br><a href="http://angular-ui.github.io/" target="_blank" rel="external">http://angular-ui.github.io/</a><br>AngularJS中文社区<br><a href="http://www.angularjs.cn/" target="_blank" rel="external">http://www.angularjs.cn/</a><br>AngularJS中文社区提供的文档（不用FQ）<br><a href="http://docs.angularjs.cn/api" target="_blank" rel="external">http://docs.angularjs.cn/api</a><br><a href="http://www.apjs.net/" target="_blank" rel="external">http://www.apjs.net/</a><br>·        AngularJS在github上的中文粗译版地址：<br><a href="https://github.com/basestyle/angularjs-cn" target="_blank" rel="external">https://github.com/basestyle/angularjs-cn</a><br>·        AngularJS相关资料中文网站：<br><a href="http://www.runoob.com/angularjs/angularjs-tutorial.html" target="_blank" rel="external">http://www.runoob.com/angularjs/angularjs-tutorial.html</a><br><a href="http://www.cnblogs.com/xing901022/p/4931455.html" target="_blank" rel="external">http://www.cnblogs.com/xing901022/p/4931455.html</a><br>二、jQuery与AngularJS区别</p>
 <p>jQuery：库<br>库一般都是封装了一些常用的方法。<br>自己手动去调用这些方法，来完成我们的功能。<br>                   $(‘#txt’).val(‘我是小明’);<br>                   $(‘div’).text(‘我是小王’);<br>angular：框架<br>框架都是提供一种规范或者模式<br>我们却要按照它提供的这种规则去写代码。<br>框架会自动帮助我们去执行相应的代码。</p>
 <hr>
-<a id="more"></a>
 <h3 id="三、AngularJS特性："><a href="#三、AngularJS特性：" class="headerlink" title="三、AngularJS特性："></a>三、AngularJS特性：</h3><p>AngularJS是一个新出现的强大客户端技术，提供给大家的一种开发强大应用的方式。这种方式利用并且扩展HTML，CSS和javascript，并且弥补了它们的一些非常明显的不足。本应该使用HTML来实现而现在由它开发的动态一些内容。<br>AngularJS有五个最重要的功能和特性：<br>3.1 特性一：双向的数据绑定</p>
 <p>数据绑定可能是AngularJS最酷最实用的特性。它能够帮助你避免书写大量的初始代码从而节约开发时间。一个典型的web应用可能包含了80%的代码用来处理，查询和监听DOM。数据绑定是的代码更少，你可以专注于你的应用。<br>我们想象一下Model是你的应用中的简单事实。你的Model是你用来读取或者更新的部分。数据绑定指令提供了你的Model投射到view的方法。这些投射可以无缝的，毫不影响的应用到web应用中。<br>传统来说，当model变化了。 开发人员需要手动处理DOM元素并且将属性反映到这些变化中。这个一个双向的过程。一方面，model变化驱动了DOM中元素变化，另一方面，DOM元素的变化也会影响到Model。这个在用户互动中更加复杂，因为开发人员需要处理和解析<br>这些互动，然后融合到一个model中，并且更新View。这是一个手动的复杂过程，当一个应用非常庞大的时候，将会是一件非常费劲的事情。<br>这里肯定有更好的解决方案！那就是AngularJS的双向数据绑定，能够同步DOM和Model等等。</p>
 <p>3.2 特性二：模板</p>
@@ -494,14 +494,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Angular</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MVC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
@@ -510,15 +502,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">高级教程</a>
+                <a href="javascript:void(0)" class="js-tag color3">Angular</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color4">MVC</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -526,7 +518,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">高级教程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
